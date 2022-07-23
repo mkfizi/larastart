@@ -1,0 +1,18 @@
+# Credits & technology stack.
+
+# Team
+
+    Khafizi Noh [Programmer] @mkfizi
+
+# Special Thanks
+
+    @estevanmaito [WindmillUI]
+    @csaba_kissi [Tabler Icons]
+    @codecalm [Tabler Icons]
+    @adamwathan [TailwindCSS]
+
+# Technology Stack
+
+    HTML5
+    TailwindCSS
+    Vanilla Javascript
