@@ -6,13 +6,12 @@
 
 # Special Thanks
 
-    @estevanmaito [WindmillUI]
-    @csaba_kissi [Tabler Icons]
-    @codecalm [Tabler Icons]
-    @adamwathan [TailwindCSS]
+    Laravel Team
+    Tabler Icons Team
+    TailwindCSS Team
 
 # Technology Stack
 
-    HTML5
+    Laravel
     TailwindCSS
     Vanilla Javascript
