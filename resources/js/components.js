@@ -459,7 +459,7 @@ window.onload = () => {
 
     // Store nodes of elements with [data-toggle] attribute.
     let buttonToggle = document.querySelectorAll("[data-toggle]");
-    console.log(buttonToggle)
+    
     // Add click event to all button toggles.
     for (let i = 0; i < buttonToggle.length; i++) {
         buttonToggle[i].addEventListener("click", handleToggle);
