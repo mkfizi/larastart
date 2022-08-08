@@ -7,10 +7,10 @@
     @include('layouts.partials.styles')
     @include('layouts.partials.scripts')
         
-    <title>{{ isset($__pageTitle) ? $__pageTitle .' | ' . __('Larastart') : __('Larastart') }}</title>
+    <title>{{ isset($_pageTitle) ? $_pageTitle .' | ' . __('Larastart') : __('Larastart') }}</title>
 </head>
 
-<body class="relative min-h-screen antialiased text-gray-900 dark:text-white {{ isset($__backgrounColor) ? $__backgrounColor  : 'bg-white' }} dark:bg-gray-900">
+<body class="relative min-h-screen antialiased text-gray-900 dark:text-white {{ isset($_backgroundColor) ? $_backgroundColor  : 'bg-white' }} dark:bg-gray-900">
     
     {{-- Page Layout --}}
     @yield('layout')
