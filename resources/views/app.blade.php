@@ -6,17 +6,11 @@
     @include('layouts.partials.twitter-card')
     @include('layouts.partials.styles')
     @include('layouts.partials.scripts')
-     
-    {{-- If $pageTitle in layout exists --}}
-    @if(!empty($attributes['pageTitle']))
-        <title>{{ $attributes['pageTitle'] .' | ' . __('Larastart') }}</title>
-    @else
-        <title>{{ __('Larastart') }}</title>
-    @endif
-    
+        
+    <title>{{ !empty($attributes['pageTitle']) ? $attributes['pageTitle'] .' | ' . __('Larastart') : __('Larastart') }}</title>
 </head>
 
-<body class="relative min-h-screen antialiased text-gray-900 dark:text-white {{ isset($bgColor) ? $bgColor  : 'bg-white' }} dark:bg-gray-900">
+<body class="relative min-h-screen antialiased text-gray-900 dark:text-white dark:bg-gray-900 {{ isset($bgColor) ? $bgColor  : 'bg-white' }}">
     
     {{-- Page Layout --}}
     @yield('layout')
