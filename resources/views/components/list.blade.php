@@ -1,3 +1,7 @@
-<ul {{ $attributes->merge(['class' => 'mb-1 text-sm']) }}>
+<ul {{ 
+    $attributes->class([
+        'mb-1', 
+    ]) 
+}}>
     {{ $slot }}
 </ul>

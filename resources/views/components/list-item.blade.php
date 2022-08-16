@@ -1,3 +1,8 @@
-<li {{ $attributes->merge(['class' => 'mb-1']) }}>
+<li {{ 
+    $attributes->class([
+        'mb-1', 
+        'text-sm', 
+    ]) 
+}}>
     {{ $slot }}
 </li>
