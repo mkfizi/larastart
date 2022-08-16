@@ -1,3 +1,8 @@
-<h4 {{ $attributes->merge(['class' => 'mb-1 text-xl']) }}>
+<h4 {{ 
+    $attributes->class([
+        'mb-1', 
+        'text-xl', 
+    ]) 
+}}>
     {{ $slot }}
 </h4>

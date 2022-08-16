@@ -1,3 +1,8 @@
-<h5 {{ $attributes->merge(['class' => 'mb-1 text-lg']) }}>
+<h5 {{ 
+    $attributes->class([
+        'mb-1', 
+        'text-lg', 
+    ]) 
+}}>
     {{ $slot }}
 </h5>
