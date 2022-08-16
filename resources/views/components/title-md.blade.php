@@ -2,7 +2,7 @@
     $attributes->class([
         'mb-1', 
         'text-2xl', 
-        'font-semibold'
+        'font-semibold',
     ]) 
 }}>
     {{ $slot }}

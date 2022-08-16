@@ -1,7 +1,7 @@
 <p {{ $attributes->class([
     'mb-1', 
     'text-xl', 
-    'font-semibold'
+    'font-semibold',
 ])}}>
     {{ $slot }}
 </p>
