@@ -16,8 +16,10 @@
                     </div>
                 </div>
                 <div class="flex flex-col justify-between">
-                    <p class="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-400">Monthly Sales</p>
-                    <p class="mb-1 text-xl font-semibold text-right">$11,805.25</p>
+                    <div class="mb-2">
+                        <x-text class="font-semibold text-gray-600 dark:text-gray-400">{{ __('Monthly Sales') }}</x-text>
+                    </div>
+                    <x-title-sm class="text-right">$11,805.25</x-title-sm>
                 </div>
             </div>
         </div>
@@ -35,8 +37,10 @@
                     </div>
                 </div>
                 <div class="flex flex-col justify-between">
-                    <p class="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-400">Monthly Orders</p>
-                    <p class="mb-1 text-xl font-semibold text-right">1,121</p>
+                    <div class="mb-2">
+                        <x-text class="font-semibold text-gray-600 dark:text-gray-400">{{ __('Monthly Orders') }}</x-text>
+                    </div>
+                    <x-title-sm class="text-right">1,121</x-title-sm>
                 </div>
             </div>
         </div>
@@ -54,8 +58,10 @@
                     </div>
                 </div>
                 <div class="flex flex-col justify-between">
-                    <p class="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-400">Total Customers</p>
-                    <p class="mb-1 text-xl font-semibold text-right">32,689</p>
+                    <div class="mb-2">
+                        <x-text class="font-semibold text-gray-600 dark:text-gray-400">{{ __('Total Customers') }}</x-text>
+                    </div>
+                    <x-title-sm class="text-right">32,689</x-title-sm>
                 </div>
             </div>
         </div>
@@ -75,8 +81,10 @@
                     </div>
                 </div>
                 <div class="flex flex-col justify-between">
-                    <p class="mb-2 text-sm font-semibold text-gray-600 dark:text-gray-400">Pending Tasks</p>
-                    <p class="mb-1 text-xl font-semibold text-right">473</p>
+                    <div class="mb-2">
+                        <x-text class="font-semibold text-gray-600 dark:text-gray-400">{{ __('Pending Tasks') }}</x-text>
+                    </div>
+                    <x-title-sm class="text-right">473</x-title-sm>
                 </div>
             </div>
         </div>
@@ -84,56 +92,57 @@
 
     {{-- Table --}}
     <p class="mb-4 text-xl font-semibold">Table</p>
-    
-    <x-table 
-        :headers="[
-            'No',
-            'Name',
-            'Email',
-            'Status',
-            'Created At',
-            'Action',
-        ]" 
-        
-        :data="$users"
-    >
-        @foreach($users as $no => $user)
-            <tr>
-                <x-table-data>{{ (++$no + (10 * ($users->currentPage() - 1))) }}</x-table-data>
-                <x-table-data>{{ $user->name }}</x-table-data>
-                <x-table-data>{{ $user->email }}</x-table-data>
-                <x-table-data>
-                    @if(!empty($user->email_verified_at))
-                        <span class="px-2 py-px text-xs text-white bg-green-600 rounded-full">{{ __('Verified') }}</span>
-                    @else
-                        <span class="px-2 py-px text-xs text-white bg-green-600 rounded-full">{{ __('Not Verified') }}</span>
-                    @endif
-                </x-table-data>
-                <x-table-data>{{ date('d F Y', strtotime($user->created_at)) }}</x-table-data>
-                <x-table-data>
-                    <span class="flex gap-4">
-                        <a href="#" class="inline-block mb-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-500" aria-label="Edit">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
-                                <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
-                                <line x1="16" y1="5" x2="19" y2="8" />
-                            </svg>
-                        </a>
-                        <a href="#" class="inline-block mb-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-500" aria-label="Delete">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <line x1="4" y1="7" x2="20" y2="7" />
-                                <line x1="10" y1="11" x2="10" y2="17" />
-                                <line x1="14" y1="11" x2="14" y2="17" />
-                                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
-                                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
-                            </svg>
-                        </a>
-                    </span>
-                </x-table-data>
-            </tr>
-        @endforeach
-    </x-table>
+    <div class="mb-8 overflow-hidden bg-white rounded-md shadow-md dark:bg-gray-800">
+        <x-table 
+            :headers="[
+                'No',
+                'Name',
+                'Email',
+                'Status',
+                'Created At',
+                'Action',
+            ]" 
+            
+            :data="$users"
+        >
+            @foreach($users as $no => $user)
+                <tr>
+                    <x-table-data>{{ (++$no + (10 * ($users->currentPage() - 1))) }}</x-table-data>
+                    <x-table-data>{{ $user->name }}</x-table-data>
+                    <x-table-data>{{ $user->email }}</x-table-data>
+                    <x-table-data>
+                        @if(!empty($user->email_verified_at))
+                            <span class="px-2 py-px text-xs text-white bg-green-600 rounded-full">{{ __('Verified') }}</span>
+                        @else
+                            <span class="px-2 py-px text-xs text-white bg-green-600 rounded-full">{{ __('Not Verified') }}</span>
+                        @endif
+                    </x-table-data>
+                    <x-table-data>{{ date('d F Y', strtotime($user->created_at)) }}</x-table-data>
+                    <x-table-data>
+                        <span class="flex gap-4">
+                            <a href="#" class="inline-block mb-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-500" aria-label="Edit">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
+                                    <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
+                                    <line x1="16" y1="5" x2="19" y2="8" />
+                                </svg>
+                            </a>
+                            <a href="#" class="inline-block mb-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-500" aria-label="Delete">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <line x1="4" y1="7" x2="20" y2="7" />
+                                    <line x1="10" y1="11" x2="10" y2="17" />
+                                    <line x1="14" y1="11" x2="14" y2="17" />
+                                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                                </svg>
+                            </a>
+                        </span>
+                    </x-table-data>
+                </tr>
+            @endforeach
+        </x-table>
+    </div>
 
 </x-dashboard-layout>
