@@ -26,7 +26,7 @@
                     <a href="https://github.com/mkfizi/tailboard" target="_blank">
                         <div class="flex justify-between gap-4 p-4 mb-4 text-sm text-white transition bg-blue-700 rounded hover:bg-blue-600">
                             <span class="flex gap-2">
-                                <x-text>{{ __('View this project on Github') }}</x-text>
+                                <p>{{ __('View this project on Github') }}</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                     <line x1="5" y1="12" x2="19" y2="12" />
