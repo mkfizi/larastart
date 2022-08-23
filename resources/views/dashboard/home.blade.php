@@ -121,7 +121,9 @@
             @foreach($examples as $no => $example)
                 <tr>
                     <x-table-data>{{ ++$no }}</x-table-data>
-                    <x-table-data>{{ $example->id }}</x-table-data>
+                    <x-table-data>
+                        <x-link-underline href="#">{{ $example->id }}</x-link-underline>
+                    </x-table-data>
                     <x-table-data>{{ $example->name }}</x-table-data>
                     <x-table-data>${{ $example->amount }}</x-table-data>
                     <x-table-data>
