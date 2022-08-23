@@ -38,7 +38,7 @@
                 </div>
                 <div class="flex flex-col justify-between">
                     <div class="mb-2">
-                        <x-text class="font-semibold text-gray-600 dark:text-gray-400">{{ __('Monthly Orders') }}</x-text>
+                        <x-text class="font-semibold text-gray-600 dark:text-gray-400">{{ __('Monthly examples') }}</x-text>
                     </div>
                     <x-title-sm class="text-right">1,121</x-title-sm>
                 </div>
@@ -92,32 +92,48 @@
 
     {{-- Table --}}
     <p class="mb-4 text-xl font-semibold">Table</p>
+
+    @php
+        $array = [(object)['id'=>'ORD3107','name'=>'Mathhew Sanders','amount'=>3780.45,'status'=>1,'date'=>'1981-07-31'],(object)['id'=>'ORD1112','name'=>'Zachary Baker','amount'=>819.20,'status'=>1,'date'=>'1981-12-11'],(object)['id'=>'ORD7070','name'=>'Brian Haner Jr.','amount'=>1128.99,'status'=>1,'date'=>'1981-07-07'],(object)['id'=>'ORD4122','name'=>'Matt Wendy','amount'=>4960.78,'status'=>3,'date'=>'1981-02-04'],(object)['id'=>'ORD8127','name'=>'Justin Sane','amount'=>321.20,'status'=>3,'date'=>'1980-08-26'],(object)['id'=>'ORD3152','name'=>'Dameon Ash','amount'=>1194.18,'status'=>2,'date'=>'1984-08-31'],(object)['id'=>'ORD1811','name'=>'Jonathan Seward','amount'=>1151.18,'status'=>1,'date'=>'1984-11-18'],(object)['id'=>'ORD2812','name'=>'James Sullivan','amount'=>9311.68,'status'=>2,'date'=>'1981-02-09'],(object)['id'=>'ORD1702','name'=>'Arin Ilejay','amount'=>6178.10,'status'=>3,'date'=>'1988-02-17'],(object)['id'=>'ORD1577','name'=>'Brooks Wackerman','amount'=>2425.60,'status'=>1,'date'=>'1981-02-14'],(object)['id'=>'ORD2812','name'=>'James Sullivan','amount'=>9311.68,'status'=>2,'date'=>'1981-02-09'],(object)['id'=>'ORD1702','name'=>'Arin Ilejay','amount'=>6178.10,'status'=>3,'date'=>'1988-02-17'],(object)['id'=>'ORD1577','name'=>'Brooks Wackerman','amount'=>2425.60,'status'=>1,'date'=>'1981-02-14'],(object)['id'=>'ORD3152','name'=>'Dameon Ash','amount'=>1194.18,'status'=>2,'date'=>'1984-08-31'],(object)['id'=>'ORD1811','name'=>'Jonathan Seward','amount'=>1151.18,'status'=>1,'date'=>'1984-11-18'],(object)['id'=>'ORD4122','name'=>'Matt Wendy','amount'=>4960.78,'status'=>3,'date'=>'1981-02-04'],(object)['id'=>'ORD8127','name'=>'Justin Sane','amount'=>321.20,'status'=>3,'date'=>'1980-08-26'],(object)['id'=>'ORD3107','name'=>'Mathhew Sanders','amount'=>3780.45,'status'=>1,'date'=>'1981-07-31'],(object)['id'=>'ORD1112','name'=>'Zachary Baker','amount'=>819.20,'status'=>1,'date'=>'1981-12-11'],(object)['id'=>'ORD7070','name'=>'Brian Haner Jr.','amount'=>1128.99,'status'=>1,'date'=>'1981-07-07'],(object)['id'=>'ORD1112','name'=>'Zachary Baker','amount'=>819.20,'status'=>1,'date'=>'1981-12-11'],(object)['id'=>'ORD7070','name'=>'Brian Haner Jr.','amount'=>1128.99,'status'=>1,'date'=>'1981-07-07'],(object)['id'=>'ORD1811','name'=>'Jonathan Seward','amount'=>1151.18,'status'=>1,'date'=>'1984-11-18'],(object)['id'=>'ORD4122','name'=>'Matt Wendy','amount'=>4960.78,'status'=>3,'date'=>'1981-02-04'],(object)['id'=>'ORD8127','name'=>'Justin Sane','amount'=>321.20,'status'=>3,'date'=>'1980-08-26'],(object)['id'=>'ORD3107','name'=>'Mathhew Sanders','amount'=>3780.45,'status'=>1,'date'=>'1981-07-31'],(object)['id'=>'ORD1577','name'=>'Brooks Wackerman','amount'=>2425.60,'status'=>1,'date'=>'1981-02-14'],(object)['id'=>'ORD3152','name'=>'Dameon Ash','amount'=>1194.18,'status'=>2,'date'=>'1984-08-31'],(object)['id'=>'ORD2812','name'=>'James Sullivan','amount'=>9311.68,'status'=>2,'date'=>'1981-02-09'],(object)['id'=>'ORD1702','name'=>'Arin Ilejay','amount'=>6178.10,'status'=>3,'date'=>'1988-02-17'],(object)['id'=>'ORD3107','name'=>'Mathhew Sanders','amount'=>3780.45,'status'=>1,'date'=>'1981-07-31'],(object)['id'=>'ORD1112','name'=>'Zachary Baker','amount'=>819.20,'status'=>1,'date'=>'1981-12-11'],(object)['id'=>'ORD7070','name'=>'Brian Haner Jr.','amount'=>1128.99,'status'=>1,'date'=>'1981-07-07'],(object)['id'=>'ORD4122','name'=>'Matt Wendy','amount'=>4960.78,'status'=>3,'date'=>'1981-02-04'],(object)['id'=>'ORD8127','name'=>'Justin Sane','amount'=>321.20,'status'=>3,'date'=>'1980-08-26'],(object)['id'=>'ORD3152','name'=>'Dameon Ash','amount'=>1194.18,'status'=>2,'date'=>'1984-08-31'],(object)['id'=>'ORD1811','name'=>'Jonathan Seward','amount'=>1151.18,'status'=>1,'date'=>'1984-11-18'],(object)['id'=>'ORD2812','name'=>'James Sullivan','amount'=>9311.68,'status'=>2,'date'=>'1981-02-09'],(object)['id'=>'ORD1702','name'=>'Arin Ilejay','amount'=>6178.10,'status'=>3,'date'=>'1988-02-17'],(object)['id'=>'ORD1577','name'=>'Brooks Wackerman','amount'=>2425.60,'status'=>1,'date'=>'1981-02-14'],(object)['id'=>'ORD2812','name'=>'James Sullivan','amount'=>9311.68,'status'=>2,'date'=>'1981-02-09'],(object)['id'=>'ORD1702','name'=>'Arin Ilejay','amount'=>6178.10,'status'=>3,'date'=>'1988-02-17'],(object)['id'=>'ORD1577','name'=>'Brooks Wackerman','amount'=>2425.60,'status'=>1,'date'=>'1981-02-14'],(object)['id'=>'ORD3152','name'=>'Dameon Ash','amount'=>1194.18,'status'=>2,'date'=>'1984-08-31'],(object)['id'=>'ORD1811','name'=>'Jonathan Seward','amount'=>1151.18,'status'=>1,'date'=>'1984-11-18'],(object)['id'=>'ORD4122','name'=>'Matt Wendy','amount'=>4960.78,'status'=>3,'date'=>'1981-02-04'],(object)['id'=>'ORD8127','name'=>'Justin Sane','amount'=>321.20,'status'=>3,'date'=>'1980-08-26'],(object)['id'=>'ORD3107','name'=>'Mathhew Sanders','amount'=>3780.45,'status'=>1,'date'=>'1981-07-31'],(object)['id'=>'ORD1112','name'=>'Zachary Baker','amount'=>819.20,'status'=>1,'date'=>'1981-12-11'],(object)['id'=>'ORD7070','name'=>'Brian Haner Jr.','amount'=>1128.99,'status'=>1,'date'=>'1981-07-07'],(object)['id'=>'ORD1112','name'=>'Zachary Baker','amount'=>819.20,'status'=>1,'date'=>'1981-12-11'],(object)['id'=>'ORD7070','name'=>'Brian Haner Jr.','amount'=>1128.99,'status'=>1,'date'=>'1981-07-07'],(object)['id'=>'ORD1811','name'=>'Jonathan Seward','amount'=>1151.18,'status'=>1,'date'=>'1984-11-18'],(object)['id'=>'ORD4122','name'=>'Matt Wendy','amount'=>4960.78,'status'=>3,'date'=>'1981-02-04'],(object)['id'=>'ORD8127','name'=>'Justin Sane','amount'=>321.20,'status'=>3,'date'=>'1980-08-26'],(object)['id'=>'ORD3107','name'=>'Mathhew Sanders','amount'=>3780.45,'status'=>1,'date'=>'1981-07-31'],(object)['id'=>'ORD1577','name'=>'Brooks Wackerman','amount'=>2425.60,'status'=>1,'date'=>'1981-02-14'],(object)['id'=>'ORD3152','name'=>'Dameon Ash','amount'=>1194.18,'status'=>2,'date'=>'1984-08-31'],(object)['id'=>'ORD2812','name'=>'James Sullivan','amount'=>9311.68,'status'=>2,'date'=>'1981-02-09'],(object)['id'=>'ORD1702','name'=>'Arin Ilejay','amount'=>6178.10,'status'=>3,'date'=>'1988-02-17']];
+        $currentPage = null;
+        $perPage = 10;
+        $options = [];
+        $currentPage = $currentPage ?: (\Illuminate\Pagination\Paginator::resolveCurrentPage() ?: 1);
+        $collections = $array instanceof Illuminate\Support\Collection ? $array : Illuminate\Support\Collection::make($array);
+        $examples = new Illuminate\Pagination\LengthAwarePaginator($collections->forPage($currentPage, $perPage), $collections->count(), $perPage, $currentPage);
+        $examples->withPath('/home');
+    @endphp
+
     <div class="mb-8 overflow-hidden bg-white rounded-md shadow-md dark:bg-gray-800">
         <x-table 
             :headers="[
                 'No',
-                'Name',
-                'Email',
+                'Order ID',
+                'Customer',
+                'Amount',
                 'Status',
-                'Created At',
+                'Date',
                 'Action',
             ]" 
             
-            :data="$users"
+            :data="$examples"
         >
-            @foreach($users as $no => $user)
+            @foreach($examples as $no => $example)
                 <tr>
-                    <x-table-data>{{ (++$no + (10 * ($users->currentPage() - 1))) }}</x-table-data>
-                    <x-table-data>{{ $user->name }}</x-table-data>
-                    <x-table-data>{{ $user->email }}</x-table-data>
+                    <x-table-data>{{ ++$no }}</x-table-data>
+                    <x-table-data>{{ $example->id }}</x-table-data>
+                    <x-table-data>{{ $example->name }}</x-table-data>
+                    <x-table-data>${{ $example->amount }}</x-table-data>
                     <x-table-data>
-                        @if(!empty($user->email_verified_at))
-                            <span class="px-2 py-px text-xs text-white bg-green-600 rounded-full">{{ __('Verified') }}</span>
-                        @else
-                            <span class="px-2 py-px text-xs text-white bg-green-600 rounded-full">{{ __('Not Verified') }}</span>
+                        @if($example->status == 1)
+                            <span class="px-2 py-px text-xs text-white bg-green-600 rounded-full">{{ __('Completed') }}</span>
+                        @elseif($example->status == 2)
+                            <span class="px-2 py-px text-xs text-white bg-yellow-600 rounded-full">{{ __('Pending') }}</span>
+                        @elseif($example->status == 3)
+                            <span class="px-2 py-px text-xs text-white bg-red-600 rounded-full">{{ __('Cancelled') }}</span>
                         @endif
                     </x-table-data>
-                    <x-table-data>{{ date('d F Y', strtotime($user->created_at)) }}</x-table-data>
+                    <x-table-data>{{ date('d F Y', strtotime($example->date)) }}</x-table-data>
                     <x-table-data>
                         <span class="flex gap-4">
                             <a href="#" class="inline-block mb-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-500" aria-label="Edit">

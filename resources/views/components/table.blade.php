@@ -78,7 +78,8 @@
                         <polyline points="9 6 15 12 9 18" />
                     </svg>
                 </a>
-                <a href="{{ $data->url(count($data)) }}" class="flex items-center justify-center w-6 h-6 mb-1 text-sm font-semibold text-blue-700 transition bg-transparent border border-blue-700 rounded dark:border-blue-500 dark:text-blue-500 hover:bg-blue-600 hover:text-white hover:border-blue-600 dark:hover:bg-blue-600 dark:hover:text-white dark:hover:border-blue-600" aria-label="Go to last page">
+
+                <a href="{{ $data->url($data->lastPage()) }}" class="flex items-center justify-center w-6 h-6 mb-1 text-sm font-semibold text-blue-700 transition bg-transparent border border-blue-700 rounded dark:border-blue-500 dark:text-blue-500 hover:bg-blue-600 hover:text-white hover:border-blue-600 dark:hover:bg-blue-600 dark:hover:text-white dark:hover:border-blue-600" aria-label="Go to last page">
                     <svg xmlns="http://www.w3.org/2000/svg"  width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <polyline points="7 7 12 12 7 17" />
