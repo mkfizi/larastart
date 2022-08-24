@@ -32,41 +32,61 @@
 
                 {{-- Links --}}
                 @case('link')
-                    @include('layouts.partials.dashboard.sidebar-link', [
-                        'active'    => $active,
-                        'url'       => $item['url'],
-                        'svg'       => $item['svg'],
-                        'title'     => $item['title'],
-                    ])
+                    <li>
+                        <a href="{{ $item['url'] }}" class="flex w-full gap-4 py-4 pl-6 pr-4 transition {{ $active ? 'text-blue-600 dark:text-blue-400' : 'hover:text-blue-500' }}">
+                            {!! $item['icon'] !!}
+                            <p class="text-sm font-semibold">
+                                {{ __($item['title']) }}
+                            </p>
+                        </a>
+                    </li>
                     @break
                 
                 {{-- Collapsable Links --}}
                 @case('collapse')
-                    <li>
+                    {{-- <li>
                         @include('layouts.partials.dashboard.sidebar-collapse', [
                                     'active'    => $active,
                                     'id'        => $item['id'],
                                     'url'       => $item['url'],
-                                    'svg'       => $item['svg'],
+                                    'icon'      => $item['icon'],
                                     'title'     => $item['title'],
                                 ])
+                    </li> --}}
+
+                    {{-- Collapse Trigger --}}
+                    <li>
+                        <button data-target="{{ $item['id'] }}" data-toggle="collapse" aria-controls="{{ $item['id'] }}" aria-expanded="{{ $active ? 'true' : 'false' }}" class="flex justify-between w-full py-4 pl-6 pr-4 transition hover:text-blue-500">
+                            <span class="flex gap-4">
+                                {!! $item['icon'] !!}
+                                <p class="text-sm font-semibold">{{ __($item['title']) }}</p>
+                            </span>
+                            <div data-icon="{{ $item['id'] }}" class="transition-transform {{ $active ? 'rotate-180' : '' }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <polyline points="6 9 12 15 18 9" />
+                                </svg>
+                            </div>
+                        </button>
                     </li>
 
                     {{-- Collapse Content --}}
                     <li>
                         <ul id="{{ $item['id'] }}" tabindex="0" class="overflow-hidden transition-all bg-gray-100 dark:bg-gray-700 {{ ($currentRoute == $item['url']) ? '' : 'invisible h-0'}}">
-                            @foreach($item['content'] as $subitem)
+                            @foreach($item['content'] as $submenu)
 
                                 @php
-                                    ($currentRoute == $subitem['url']) ? $active = true : $active = false;
+                                    ($currentRoute == $submenu['url']) ? $active = true : $active = false;
                                 @endphp
                                 
-                                @include('layouts.partials.dashboard.sidebar-link', [
-                                    'active'    => $active,
-                                    'url'       => $subitem['url'],
-                                    'svg'       => $subitem['svg'],
-                                    'title'     => $subitem['title'],
-                                ])
+                                <li>
+                                    <a href="{{ $submenu['url'] }}" class="flex w-full gap-4 py-4 pl-6 pr-4 transition {{ $active ? 'text-blue-600 dark:text-blue-400' : 'hover:text-blue-500' }}">
+                                        {!! $submenu['icon'] !!}
+                                        <p class="text-sm font-semibold">
+                                            {{ __($submenu['title']) }}
+                                        </p>
+                                    </a>
+                                </li>
                             @endforeach
                         </ul>
                     </li>
