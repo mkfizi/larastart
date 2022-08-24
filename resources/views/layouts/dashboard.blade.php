@@ -23,7 +23,7 @@
                     </div>
 
                     {{-- View Github --}}
-                    <a href="https://github.com/mkfizi/tailboard" target="_blank">
+                    <a href="https://github.com/mkfizi/larastart" target="_blank">
                         <div class="flex justify-between gap-4 p-4 mb-4 text-sm text-white transition bg-blue-700 rounded hover:bg-blue-600">
                             <span class="flex gap-2">
                                 <p>{{ __('View this project on Github') }}</p>
