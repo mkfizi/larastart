@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::name('dashboard.')->group(function () {
-    Route::get('/home', [DashboardController::class, 'home'])->name('home');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('index');
     Route::get('/typography', [DashboardController::class, 'typography'])->name('typography');
     Route::get('/forms', [DashboardController::class, 'forms'])->name('forms');
 });

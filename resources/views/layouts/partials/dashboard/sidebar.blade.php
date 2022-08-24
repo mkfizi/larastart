@@ -2,13 +2,11 @@
     $currentRoute = '/'. Route::current()->uri;
 @endphp
 
-{{-- @dd(Route::currentRouteAction(), Route::current(),Route::currentRouteName()) --}}
-
 <aside id="dashboardSidebar" role="dialog" tabindex="-1" class="fixed top-0 z-30 flex flex-col invisible w-64 h-screen overflow-y-auto transition -translate-x-full bg-white lg:visible lg:z-10 dark:bg-gray-800 lg:border-r lg:border-gray-100 lg:dark:border-gray-900 lg:shadow-none lg:sticky shrink-0 lg:translate-x-0 lg:transition-none">
     <div class="flex items-center justify-between px-4 py-5 lg:pl-6">
 
         {{-- Title --}}
-        <a href="{{ route('dashboard.home') }}" class="block text-xl font-bold text-blue-600 transition dark:text-blue-400 hover:text-blue-500">{{ config('larastart.name') }}</a>
+        <a href="{{ route('dashboard.index') }}" class="block text-xl font-bold text-blue-600 transition dark:text-blue-400 hover:text-blue-500">{{ config('larastart.name') }}</a>
 
         {{-- Dashboard Sidebar Hide Button --}}
         <button type="button" data-target="dashboardSidebar" data-toggle="sidebar" class="transition lg:hidden stroke-blue-600 dark:stroke-blue-400 hover:stroke-blue-500 dark:hover:stroke-blue-500" aria-label="Close dashboard sidebar" aria-controls="dashboardSidebar">

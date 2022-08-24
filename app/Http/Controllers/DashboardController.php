@@ -9,13 +9,13 @@ use Illuminate\Http\Request;
 class DashboardController extends Controller
 {
     /**
-     * Display dashboard home page.
+     * Display dashboard index page.
      *
      * @return \Illuminate\Http\Response
      */
-    public function home()
+    public function index()
     {
-        return view('dashboard.home');
+        return view('dashboard.index');
     }
 
     /**
