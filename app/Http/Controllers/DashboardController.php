@@ -27,5 +27,15 @@ class DashboardController extends Controller
     {
         return view('dashboard.typography');
     }
+
+    /**
+     * Display dashboard forms page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function forms()
+    {
+        return view('dashboard.forms');
+    }
     
 }
