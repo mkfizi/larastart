@@ -78,7 +78,7 @@
             [
                 'type'      => 'collapse',
                 'title'     => 'Components',
-                'url'       => '',
+                'url'       => '/components',
                 'icon'      => '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                     <rect x="4" y="4" width="6" height="6" rx="1" />
@@ -87,10 +87,10 @@
                                     <rect x="14" y="14" width="6" height="6" rx="1" />
                                 </svg>',
                 'id'        => 'componentCollapse',
-                'content'   => [
+                'subitems'  => [
                     [
                         'title' => 'Alerts',
-                        'url'   => '',
+                        'url'   => '/components/alerts',
                         'icon'  => '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                         <path d="M10 6h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
@@ -147,7 +147,7 @@
                                     <path d="M12 4v16" />
                                 </svg>',
                 'id'        => 'pagesCollapse',
-                'content'   => [
+                'subitems'  => [
                     [
                         'title' => 'Login',
                         'url'   => '',
