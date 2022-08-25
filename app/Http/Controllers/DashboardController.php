@@ -47,5 +47,15 @@ class DashboardController extends Controller
     {
         return view('dashboard.buttons');
     }
+
+    /**
+     * Display dashboard alerts page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function alerts()
+    {
+        return view('dashboard.components.alerts');
+    }
     
 }

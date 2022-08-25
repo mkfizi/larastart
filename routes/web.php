@@ -24,4 +24,8 @@ Route::name('dashboard.')->group(function () {
     Route::get('/typography', [DashboardController::class, 'typography'])->name('typography');
     Route::get('/forms', [DashboardController::class, 'forms'])->name('forms');
     Route::get('/buttons', [DashboardController::class, 'buttons'])->name('buttons');
+
+    Route::prefix('components')->name('components')->group(function () {
+        Route::get('/alerts', [DashboardController::class, 'alerts'])->name('alerts'); 
+    });
 });
