@@ -11,7 +11,7 @@
             <div class="mb-2">
                 <x-label for="input-example" class="font-semibold">{{ __('Input') }}</x-label>
             </div>
-            <x-input type="text" id="input-example" name="input_example" placeholder="Input example"></x-input>
+            <x-input type="text" id="input-example" name="input_example" placeholder="{{ __('Input example') }}"></x-input>
         </div>
 
         {{-- Select --}}
@@ -32,7 +32,7 @@
             <div class="mb-2">
                 <x-label for="text-area-example" class="font-semibold">{{ __('Text Area') }}</x-label>
             </div>
-            <x-text-area id="text-area-example" name="text_area_example" placeholder="Text area example"></x-text-area>
+            <x-text-area id="text-area-example" name="text_area_example" placeholder="{{ __('Text area example') }}"></x-text-area>
         </div>
 
         {{-- Input Checkbox --}}
@@ -82,7 +82,7 @@
             <div class="mb-2">
                 <x-label for="input-disabled-example" class="font-semibold">{{ __('Input') }}</x-label>
             </div>
-            <x-input type="text" id="input-disabled-example" name="input_disabled_example" placeholder="Input disabled example" disabled></x-input>
+            <x-input type="text" id="input-disabled-example" name="input_disabled_example" placeholder="{{ __('Input disabled example') }}" disabled></x-input>
         </div>
 
         {{-- Select Disabled --}}
@@ -103,7 +103,7 @@
             <div class="mb-2">
                 <x-label for="text-area-disabled-example" class="font-semibold" disabled>{{ __('Text Area') }}</x-label>
             </div>
-            <x-text-area id="text-area-disabled-example" name="text_area_disabled_example" placeholder="Text area disabled example" disabled></x-text-area>
+            <x-text-area id="text-area-disabled-example" name="text_area_disabled_example" placeholder="{{ __('Text area disabled example') }}" disabled></x-text-area>
         </div>
 
         {{-- Input Checkbox Disabled --}}
@@ -154,7 +154,7 @@
                 <x-label for="input-left-icon-example" class="font-semibold">{{ __('Left Icon') }}</x-label>
             </div>
             <div class="relative">
-                <x-input type="text" id="input-left-icon-example" name="input_left_icon_example" placeholder="Input example" class="pl-8"></x-input>
+                <x-input type="text" id="input-left-icon-example" name="input_left_icon_example" placeholder="{{ __('Input example') }}" class="pl-8"></x-input>
                 <svg xmlns="http://www.w3.org/2000/svg" class="absolute top-2 left-2 stroke-gray-500" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <circle cx="12" cy="7" r="4" />
@@ -174,7 +174,7 @@
                     <circle cx="12" cy="7" r="4" />
                     <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
                 </svg>
-                <x-input type="text" id="input-right-icon-example" name="input_right_icon_example" placeholder="Input example" class="pr-8"></x-input>
+                <x-input type="text" id="input-right-icon-example" name="input_right_icon_example" placeholder="{{ __('Input example') }}" class="pr-8"></x-input>
             </div>
         </div>
     </div>
@@ -190,7 +190,7 @@
             <div class="mb-2">
                 <x-label for="input-valid-example" class="font-semibold">{{ __('Valid Input') }}</x-label>
             </div>
-            <x-input type="text" id="input-valid-example" name="input_valid_example" placeholder="Input valid example"></x-input>
+            <x-input type="text" id="input-valid-example" name="input_valid_example" placeholder="{{ __('Input valid example') }}"></x-input>
             <x-text-valid>{{ __('Input is valid.') }}</x-text-valid>
         </div>
 
@@ -199,7 +199,7 @@
             <div class="mb-2">
                 <x-label for="input-invalid-example" class="font-semibold">{{ __('Invalid Input') }}</x-label>
             </div>
-            <x-input type="text" id="input-invalid-example" name="input_invalid_example" placeholder="Input invalid example"></x-input>
+            <x-input type="text" id="input-invalid-example" name="input_invalid_example" placeholder="{{ __('Input invalid example') }}"></x-input>
             <x-text-invalid>{{ __('Input is invalid.') }}</x-text-invalid>
         </div>
         </div>
