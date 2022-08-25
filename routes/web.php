@@ -23,4 +23,5 @@ Route::name('dashboard.')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('index');
     Route::get('/typography', [DashboardController::class, 'typography'])->name('typography');
     Route::get('/forms', [DashboardController::class, 'forms'])->name('forms');
+    Route::get('/buttons', [DashboardController::class, 'buttons'])->name('buttons');
 });

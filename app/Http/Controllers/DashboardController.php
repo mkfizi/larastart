@@ -37,5 +37,15 @@ class DashboardController extends Controller
     {
         return view('dashboard.forms');
     }
+
+    /**
+     * Display dashboard buttons page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function buttons()
+    {
+        return view('dashboard.buttons');
+    }
     
 }
