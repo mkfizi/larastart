@@ -19,7 +19,7 @@
                     <div class="mb-2">
                         <x-text class="font-semibold text-gray-600 dark:text-gray-400">{{ __('Monthly Sales') }}</x-text>
                     </div>
-                    <x-title-sm class="text-right">$11,805.25</x-title-sm>
+                    <x-title class="text-right">$11,805.25</x-title>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
                     <div class="mb-2">
                         <x-text class="font-semibold text-gray-600 dark:text-gray-400">{{ __('Monthly Orders') }}</x-text>
                     </div>
-                    <x-title-sm class="text-right">1,121</x-title-sm>
+                    <x-title class="text-right">1,121</x-title>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@
                     <div class="mb-2">
                         <x-text class="font-semibold text-gray-600 dark:text-gray-400">{{ __('Total Customers') }}</x-text>
                     </div>
-                    <x-title-sm class="text-right">32,689</x-title-sm>
+                    <x-title class="text-right">32,689</x-title>
                 </div>
             </div>
         </div>
@@ -84,7 +84,7 @@
                     <div class="mb-2">
                         <x-text class="font-semibold text-gray-600 dark:text-gray-400">{{ __('Pending Tasks') }}</x-text>
                     </div>
-                    <x-title-sm class="text-right">473</x-title-sm>
+                    <x-title class="text-right">473</x-title>
                 </div>
             </div>
         </div>
