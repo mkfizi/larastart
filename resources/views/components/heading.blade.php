@@ -21,7 +21,7 @@
             break;
         case 'h5':
         default:
-            $fontSize = 'text-xl';
+            $fontSize = 'text-base';
             break;
     }
 @endphp
