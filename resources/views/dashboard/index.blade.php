@@ -104,28 +104,27 @@
         $examples->withPath('/dashboard');
     @endphp
 
-    {{-- <div class="mb-8 overflow-hidden bg-white rounded-md shadow-md dark:bg-gray-800"> --}}
-    <div class="mb-8 bg-white rounded-md shadow-md dark:bg-gray-800">
+    <div class="mb-8 overflow-hidden bg-white rounded-md shadow-md dark:bg-gray-800">
         <x-table :data="$examples">
             <x-slot name="head">
-                <x-th>{{ __('No') }}</x-th>
-                <x-th>{{ __('Order ID') }}</x-th>
-                <x-th>{{ __('Customer') }}</x-th>
-                <x-th>{{ __('Amount') }}</x-th>
-                <x-th>{{ __('Status') }}</x-th>
-                <x-th>{{ __('Date') }}</x-th>
-                <x-th>{{ __('Actions') }}</x-th>
+                <x-table-data tag="th">{{ __('No') }}</x-table-data>
+                <x-table-data tag="th">{{ __('Order ID') }}</x-table-data>
+                <x-table-data tag="th">{{ __('Customer') }}</x-table-data>
+                <x-table-data tag="th">{{ __('Amount') }}</x-table-data>
+                <x-table-data tag="th">{{ __('Status') }}</x-table-data>
+                <x-table-data tag="th">{{ __('Date') }}</x-table-data>
+                <x-table-data tag="th">{{ __('Actions') }}</x-table-data>
             </x-slot>
             
             @foreach($examples as $no => $example)
                 <tr>
-                    <x-td>{{ ++$no }}</x-td>
-                    <x-td>
-                        <x-link-underline href="#">{{ $example->id }}</x-link-underline>
-                    </x-td>
-                    <x-td>{{ $example->name }}</x-td>
-                    <x-td>${{ number_format((float)$example->amount, 2, '.', '') }}</x-td>
-                    <x-td>
+                    <x-table-data tag="td">{{ ++$no }}</x-table-data>
+                    <x-table-data tag="td">
+                        <x-link underline="true" href="#">{{ $example->id }}</x-link>
+                    </x-table-data>
+                    <x-table-data tag="td">{{ $example->name }}</x-table-data>
+                    <x-table-data tag="td">${{ number_format((float)$example->amount, 2, '.', '') }}</x-table-data>
+                    <x-table-data tag="td">
                         @if($example->status == 1)
                             <span class="px-2 py-px text-xs text-white bg-green-600 rounded-full">{{ __('Completed') }}</span>
                         @elseif($example->status == 2)
@@ -133,86 +132,17 @@
                         @elseif($example->status == 3)
                             <span class="px-2 py-px text-xs text-white bg-red-600 rounded-full">{{ __('Cancelled') }}</span>
                         @endif
-                    </x-td>
-                    <x-td>{{ date('d-F-Y', strtotime($example->date)) }}</x-td>
-                    <x-td>
+                    </x-table-data>
+                    <x-table-data tag="td">{{ date('d-F-Y', strtotime($example->date)) }}</x-table-data>
+                    <x-table-data tag="td">
                         <span class="flex gap-4">
-                            <a href="#" class="inline-block mb-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-500" aria-label="Edit">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                    <path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
-                                    <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
-                                    <line x1="16" y1="5" x2="19" y2="8" />
-                                </svg>
-                            </a>
-                            <a href="#" class="inline-block mb-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-500" aria-label="Delete">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                    <line x1="4" y1="7" x2="20" y2="7" />
-                                    <line x1="10" y1="11" x2="10" y2="17" />
-                                    <line x1="14" y1="11" x2="14" y2="17" />
-                                    <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
-                                    <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
-                                </svg>
-                            </a>
+                            <x-table-action type="update" href="#"></x-table-action>
+                            <x-table-action type="delete" href="#"></x-table-action>
                         </span>
-                    </x-td>
+                    </x-table-data>
                 </tr>
             @endforeach
         </x-table>
-        {{-- <x-table>
-            <x-thead>
-                <tr>
-                </tr>
-            </x-thead>
-            <x-table-tbody>
-
-                @foreach($examples as $no => $example)
-                    <tr>
-                        <x-td>{{ ++$no }}</x-td>
-                        <x-td>
-                            <x-link-underline href="#">{{ $example->id }}</x-link-underline>
-                        </x-td>
-                        <x-td>{{ $example->name }}</x-td>
-                        <x-td>${{ number_format((float)$example->amount, 2, '.', '') }}</x-td>
-                        <x-td>
-                            @if($example->status == 1)
-                                <span class="px-2 py-px text-xs text-white bg-green-600 rounded-full">{{ __('Completed') }}</span>
-                            @elseif($example->status == 2)
-                                <span class="px-2 py-px text-xs text-white bg-yellow-600 rounded-full">{{ __('Pending') }}</span>
-                            @elseif($example->status == 3)
-                                <span class="px-2 py-px text-xs text-white bg-red-600 rounded-full">{{ __('Cancelled') }}</span>
-                            @endif
-                        </x-td>
-                        <x-td>{{ date('d-F-Y', strtotime($example->date)) }}</x-td>
-                        <x-td>
-                            <span class="flex gap-4">
-                                <a href="#" class="inline-block mb-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-500" aria-label="Edit">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                        <path d="M9 7h-3a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-3" />
-                                        <path d="M9 15h3l8.5 -8.5a1.5 1.5 0 0 0 -3 -3l-8.5 8.5v3" />
-                                        <line x1="16" y1="5" x2="19" y2="8" />
-                                    </svg>
-                                </a>
-                                <a href="#" class="inline-block mb-1 text-sm text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-500" aria-label="Delete">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                        <line x1="4" y1="7" x2="20" y2="7" />
-                                        <line x1="10" y1="11" x2="10" y2="17" />
-                                        <line x1="14" y1="11" x2="14" y2="17" />
-                                        <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
-                                        <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
-                                    </svg>
-                                </a>
-                            </span>
-                        </x-td>
-                    </tr>
-                @endforeach
-
-            </x-table-tbody>
-        </x-table>
-        <x-table-nav :data="$examples"></x-table-nav>  --}}
     </div>
 
 </x-dashboard-layout>
