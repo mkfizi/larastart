@@ -1,5 +1,5 @@
 @props([
-    'type' => ''
+    'type' => 'none'
 ])
 
 @php
@@ -12,6 +12,7 @@
         case 'decimal':
             $listType = 'list-decimal';
             break; 
+        case 'none':
         default:
             $listType = null;
             $marginLeft = null;
