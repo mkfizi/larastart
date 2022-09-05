@@ -2,7 +2,7 @@
 
     {{-- Example --}}
     <div class="mb-4">
-        <x-title-sm>{{ __('Example') }} </x-title-sm>
+        <x-title size="sm">{{ __('Example') }} </x-title>
     </div>
     <div class="p-4 mb-8 bg-white rounded-md shadow-md dark:bg-gray-800">
 
@@ -11,7 +11,7 @@
             <div class="mb-2">
                 <x-text class="font-semibold">{{ __('Regular') }}</x-text>
             </div>
-            <x-button type="button">{{ __('Button') }}</x-button>
+            <x-button tag="button" outline="false" type="button">{{ __('Button') }}</x-button>
         </div>
 
         {{-- Outline --}}
@@ -19,7 +19,7 @@
             <div class="mb-2">
                 <x-text class="font-semibold">{{ __('Outline') }}</x-text>
             </div>
-            <x-button-outline type="button">{{ __('Button') }}</x-button-outline>
+            <x-button tag="button" outline="true" type="button">{{ __('Button') }}</x-button>
         </div>
 
         {{-- Link as a Button --}}
@@ -27,7 +27,7 @@
             <div class="mb-2">
                 <x-text class="font-semibold">{{ __('Link as a Button') }}</x-text>
             </div>
-            <x-link-button href="#">{{ __('Button') }}</x-link-button>
+            <x-button tag="link" outline="false" href="#">{{ __('Button') }}</x-button>
         </div>
 
         {{-- Link as an Outline Button --}}
@@ -35,7 +35,7 @@
             <div class="mb-2">
                 <x-text class="font-semibold">{{ __('Link as an Outline Button') }}</x-text>
             </div>
-            <x-link-button-outline href="#">{{ __('Button') }}</x-link-button-outline>
+            <x-button tag="link" outline="true" href="#">{{ __('Button') }}</x-button>
         </div>
 
         <x-text class="font-semibold">{{ __('Note:' )}}</x-text>
@@ -44,7 +44,7 @@
 
     {{-- Disabled --}}
     <div class="mb-4">
-        <x-title-sm>{{ __('Disabled') }} </x-title-sm>
+        <x-title size="sm">{{ __('Disabled') }} </x-title>
     </div>
     <div class="p-4 mb-8 bg-white rounded-md shadow-md dark:bg-gray-800">
 
@@ -53,7 +53,7 @@
             <div class="mb-2">
                 <x-text class="font-semibold">{{ __('Regular') }}</x-text>
             </div>
-            <x-button type="button" disabled>{{ __('Button') }}</x-button>
+            <x-button tag="button" outline="false" type="button" disabled>{{ __('Button') }}</x-button>
         </div>
 
         {{-- Outline --}}
@@ -61,7 +61,7 @@
             <div class="mb-2">
                 <x-text class="font-semibold">{{ __('Outline') }}</x-text>
             </div>
-            <x-button-outline type="button" disabled>{{ __('Button') }}</x-button-outline>
+            <x-button tag="button" outline="true" type="button" disabled>{{ __('Button') }}</x-button>
         </div>
 
         <x-text class="font-semibold">{{ __('Note:' )}}</x-text>
@@ -71,7 +71,7 @@
 
     {{-- Icons --}}
     <div class="mb-4">
-        <x-title-sm>{{ __('Icons') }} </x-title-sm>
+        <x-title size="sm">{{ __('Icons') }} </x-title>
     </div>
 
     <div class="p-4 mb-8 bg-white rounded-md shadow-md dark:bg-gray-800">
@@ -81,7 +81,7 @@
             <div class="mb-2">
                 <x-text class="font-semibold">{{ __('Left Icon') }}</x-text>
             </div>
-            <x-button type="button">
+            <x-button tag="button" outline="false" type="button">
                 <div class="flex gap-2">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -98,7 +98,7 @@
             <div class="mb-2">
                 <x-text class="font-semibold">{{ __('Right Icon') }}</x-text>
             </div>
-            <x-button type="button">
+            <x-button tag="button" outline="false" type="button">
                 <div class="flex gap-2">
                     <span>{{ __('Right Icon') }}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
