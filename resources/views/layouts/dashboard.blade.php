@@ -10,16 +10,16 @@
         {{-- Sidebar --}}
         @include('layouts.partials.dashboard.sidebar')
 
-        <div class="flex-auto w-full">
+        <div class="w-full">
             
             {{-- Navbar --}}
             @include('layouts.partials.dashboard.navbar')
 
             {{-- Main Content --}}
-            <main class="container p-4 mx-auto lg:px-6">
+            <main class="p-4 mx-auto md:max-w-3xl xl:max-w-5xl lg:px-6">
                 <section class="mt-4 mb-16">
                     <div class="mb-4">
-                        <x-title-md>{{ !empty($attributes['pageTitle']) ? $attributes['pageTitle'] : '' }}</x-title-md>
+                        <x-title size="md">{{ !empty($attributes['pageTitle']) ? $attributes['pageTitle'] : '' }}</x-title>
                     </div>
 
                     {{-- View Github --}}
