@@ -1,3 +1,5 @@
-<footer class="absolute bottom-0 w-full text-center lg:w-auto lg:right-6">
-    <x-text><small>{{ __('Larastart') }} © {{ date('Y')}}</small></x-text>
+<footer class="relative">
+   <div class="absolute bottom-0 w-full text-center">
+        <x-text><small>{{ config('larastart.name') }} © {{ date('Y')}}</small></x-text>
+   </div>
 </footer>
