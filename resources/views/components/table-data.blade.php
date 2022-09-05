@@ -16,6 +16,7 @@
 
 <{{ $tag }} {{ 
     $attributes->class([
+        'text-sm',
         $padding
     ]) 
 }}>
