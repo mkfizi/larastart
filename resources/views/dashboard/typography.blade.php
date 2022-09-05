@@ -19,7 +19,7 @@
         <x-title size="xl">{{ __('Extra Large Title') }}</x-title>
         <x-title size="lg">{{ __('Large Title') }}</x-title>
         <x-title size="md">{{ __('Medium Title') }}</x-title>
-        <x-title>{{ __('Small Title') }}</x-title>
+        <x-title size="sm">{{ __('Small Title') }}</x-title>
     </div>
 
     {{-- Headings --}}
@@ -40,7 +40,7 @@
         <x-title>{{ __('Links') }} </x-title>
     </div>
     <div class="p-4 mb-8 bg-white rounded-md shadow-md dark:bg-gray-800">
-        <x-link href="#">{{ __('This is a link text.') }}</x-link>
+        <x-link href="#" underline="false">{{ __('This is a link text.') }}</x-link>
         <x-link href="#" underline="true">{{ __('This is a link text with underline.') }}</x-link>
     </div>
 
@@ -54,7 +54,7 @@
                 <div class="mb-2">
                     <x-text class="font-semibold">{{ __('Regular List') }}</x-text>
                 </div>
-                <x-list>
+                <x-list type="none">
                     <x-list-item>{{ __('First item.') }}</x-list-item>
                     <x-list-item>{{ __('Second item.') }}</x-list-item>
                     <x-list-item>{{ __('Third item.') }}</x-list-item>
