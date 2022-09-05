@@ -22,7 +22,8 @@
 
 <ul {{ 
     $attributes->class([
-        "mb-1 $marginLeft", 
+        'mb-1', 
+        $marginLeft,
         $listType,
     ]) 
 }}>
