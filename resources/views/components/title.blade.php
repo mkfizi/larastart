@@ -22,8 +22,8 @@
 
 <p {{ $attributes->class([
     'mb-1', 
-    $fontSize, 
     'font-semibold',
+    $fontSize, 
 ])}}>
     {{ $slot }}
 </p>
