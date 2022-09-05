@@ -41,7 +41,7 @@
     </div>
     <div class="p-4 mb-8 bg-white rounded-md shadow-md dark:bg-gray-800">
         <x-link href="#">{{ __('This is a link text.') }}</x-link>
-        <x-link-underline href="#">{{ __('This is a link text with underline.') }}</x-link-underline>
+        <x-link href="#" underline="true">{{ __('This is a link text with underline.') }}</x-link>
     </div>
 
     {{-- Lists --}}
@@ -64,21 +64,21 @@
                 <div class="mb-2">
                     <x-text class="font-semibold">{{ __('Disc List') }}</x-text>
                 </div>
-                <x-list-disc>
+                <x-list type="disc">
                     <x-list-item>{{ __('First item.') }}</x-list-item>
                     <x-list-item>{{ __('Second item.') }}</x-list-item>
                     <x-list-item>{{ __('Third item.') }}</x-list-item>
-                </x-list-disc>
+                </x-list>
             </div>
             <div>
                 <div class="mb-2">
                     <x-text class="font-semibold">{{ __('Numbered List') }}</x-text>
                 </div>
-                <x-list-decimal>
+                <x-list type="decimal">
                     <x-list-item>{{ __('First item.') }}</x-list-item>
                     <x-list-item>{{ __('Second item.') }}</x-list-item>
                     <x-list-item>{{ __('Third item.') }}</x-list-item>
-                </x-list-decimal>
+                </x-list>
             </div>
         </div>
     </div>
