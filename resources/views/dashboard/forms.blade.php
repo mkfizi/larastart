@@ -2,7 +2,7 @@
 
     {{-- Example --}}
     <div class="mb-4">
-        <x-title size="sm">{{ __('Example') }} </x-title>
+        <x-title-sm>{{ __('Example') }}</x-title-sm>
     </div>
     <div class="p-4 mb-8 bg-white rounded-md shadow-md dark:bg-gray-800">
 
@@ -40,8 +40,10 @@
             <div class="mb-2">
                 <x-text class="font-semibold">{{ __('Checkbox') }}</x-text>
             </div>
-            <x-input type="checkbox" id="checkbox-example" name="checkbox_example">{{ __('Checkbox Example') }}</x-input>
-            <x-label for="checkbox-example" class="ml-1">{{ __('Checkbox item') }}</x-label>
+            <div class="flex items-center gap-2">
+                <x-input-checkbox id="checkbox-example" name="checkbox_example">{{ __('Checkbox Example') }}</x-input-checkbox>
+                <x-label for="checkbox-example">{{ __('Checkbox item') }}</x-label>
+            </div>
         </div>
 
         {{-- Input Radio --}}
@@ -51,13 +53,13 @@
             </div>
 
             <div class="flex gap-4">
-                <span>
-                    <x-input type="radio" id="radio-example-1" name="radio_example">{{ __('Radio Example 1') }}</x-input>
-                    <x-label for="radio-example-1" class="ml-1">{{ __('Radio item 1') }}</x-label>
+                <span class="flex items-center gap-2">
+                    <x-input-radio id="radio-example-1" name="radio_example">{{ __('Radio Example 1') }}</x-input-radio>
+                    <x-label for="radio-example-1">{{ __('Radio item 1') }}</x-label>
                 </span>
-                <span>
-                    <x-input type="radio" id="radio-example-2" name="radio_example">{{ __('Radio Example 2') }}</x-input>
-                    <x-label for="radio-example-2" class="ml-1">{{ __('Radio item 2') }}</x-label>
+                <span class="flex items-center gap-2">
+                    <x-input-radio id="radio-example-2" name="radio_example">{{ __('Radio Example 2') }}</x-input-radio>
+                    <x-label for="radio-example-2">{{ __('Radio item 2') }}</x-label>
                 </span>
             </div>
         </div>
@@ -67,13 +69,13 @@
             <div class="mb-2">
                 <x-label for="uplaod-file-example" class="font-semibold">{{ __('Upload File') }}</x-label>
             </div>
-            <x-input type="file" id="upload-file-example" name="upload_file_example"></x-input>
+            <x-input-file id="upload-file-example" name="upload_file_example"></x-input-file>
         </div>
     </div>
 
     {{-- Disabled --}}
     <div class="mb-4">
-        <x-title size="sm">{{ __('Disabled') }} </x-title>
+        <x-title-sm>{{ __('Disabled') }} </x-title-sm>
     </div>
     <div class="p-4 mb-8 bg-white rounded-md shadow-md dark:bg-gray-800">
 
@@ -111,8 +113,10 @@
             <div class="mb-2">
                 <x-text class="font-semibold">{{ __('Checkbox') }}</x-text>
             </div>
-            <x-input type="checkbox" id="checkbox-disabled-example" name="checkbox_example" disabled>{{ __('Checkbox Disabled Example') }}</x-input>
-            <x-label for="checkbox-disabled-example" class="ml-1">{{ __('Checkbox item') }}</x-label>
+            <div class="flex items-center gap-2">
+                <x-input-checkbox id="checkbox-disabled-example" name="checkbox_example" disabled>{{ __('Checkbox Disabled Example') }}</x-input-checkbox>
+                <x-label for="checkbox-disabled-example">{{ __('Checkbox item') }}</x-label>
+            </div>
         </div>
 
         {{-- Input Radio Disabled --}}
@@ -122,13 +126,13 @@
             </div>
 
             <div class="flex gap-4">
-                <span>
-                    <x-input type="radio" id="radio-disabled-example-1" name="radio_disabled_example" disabled>{{ __('Radio Example 1') }}</x-input>
-                    <x-label for="radio-disabled-example-1" class="ml-1">{{ __('Radio item 1') }}</x-label>
+                <span class="flex items-center gap-2">
+                    <x-input-radio id="radio-disabled-example-1" name="radio_disabled_example" disabled>{{ __('Radio Example 1') }}</x-input-radio>
+                    <x-label for="radio-disabled-example-1">{{ __('Radio item 1') }}</x-label>
                 </span>
-                <span>
-                    <x-input type="radio" id="radio-disabled-example-2" name="radio_disabled_example" disabled>{{ __('Radio Example 2') }}</x-input>
-                    <x-label for="radio-disabled-example-2" class="ml-1">{{ __('Radio item 2') }}</x-label>
+                <span class="flex items-center gap-2">
+                    <x-input-radio id="radio-disabled-example-2" name="radio_disabled_example" disabled>{{ __('Radio Example 2') }}</x-input-radio>
+                    <x-label for="radio-disabled-example-2">{{ __('Radio item 2') }}</x-label>
                 </span>
             </div>
         </div>
@@ -138,13 +142,13 @@
             <div class="mb-2">
                 <x-label for="uplaod-file-disabled-example" class="font-semibold">{{ __('Upload File') }}</x-label>
             </div>
-            <x-input type="file" id="upload-file-disabled-example" name="upload_file_disabled_example" disabled></x-input>
+            <x-input-file id="upload-file-disabled-example" name="upload_file_disabled_example" disabled></x-input-file>
         </div>
     </div>
 
     {{-- Icons --}}
     <div class="mb-4">
-        <x-title size="sm">{{ __('Icons') }} </x-title>
+        <x-title-sm>{{ __('Icons') }} </x-title-sm>
     </div>
     <div class="p-4 mb-8 bg-white rounded-md shadow-md dark:bg-gray-800">
 
@@ -181,7 +185,7 @@
 
     {{-- Text Validation --}}
     <div class="mb-4">
-        <x-title size="sm">{{ __('Text Validation') }} </x-title>
+        <x-title-sm>{{ __('Text Validation') }} </x-title-sm>
     </div>
     <div class="p-4 mb-8 bg-white rounded-md shadow-md dark:bg-gray-800">
 
