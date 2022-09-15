@@ -1,10 +1,10 @@
 <a {{ 
     $attributes->class([
-        'mb-1', 
-        'text-sm', 
-        'inline-block', 
-        'text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-500', 
-        'transition', 
+        'mb-1',
+        'text-sm',
+        'transition',
+        'inline-block',
+        'text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-500',
     ]) 
 }}>
     {{ $slot }}
