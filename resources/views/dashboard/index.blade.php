@@ -19,7 +19,9 @@
                     <div class="mb-2">
                         <x-text class="font-semibold text-gray-600 dark:text-gray-400">{{ __('Monthly Sales') }}</x-text>
                     </div>
-                    <x-title class="text-right">$11,805.25</x-title>
+                    <div class="text-right">
+                        <x-title-sm>$11,805.25</x-title-sm>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,7 +42,9 @@
                     <div class="mb-2">
                         <x-text class="font-semibold text-gray-600 dark:text-gray-400">{{ __('Monthly Orders') }}</x-text>
                     </div>
-                    <x-title class="text-right">1,121</x-title>
+                    <div class="text-right">
+                        <x-title-sm>1,121</x-title-sm>
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,7 +65,9 @@
                     <div class="mb-2">
                         <x-text class="font-semibold text-gray-600 dark:text-gray-400">{{ __('Total Customers') }}</x-text>
                     </div>
-                    <x-title class="text-right">32,689</x-title>
+                    <div class="text-right">
+                        <x-title-sm>32,689</x-title-sm>
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,7 +90,9 @@
                     <div class="mb-2">
                         <x-text class="font-semibold text-gray-600 dark:text-gray-400">{{ __('Pending Tasks') }}</x-text>
                     </div>
-                    <x-title class="text-right">473</x-title>
+                    <div class="text-right">
+                        <x-title-sm>473</x-title-sm>
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,26 +113,28 @@
     @endphp
 
     <div class="mb-8 overflow-hidden bg-white rounded-md shadow-md dark:bg-gray-800">
-        <x-table :data="$examples">
-            <x-slot name="head">
-                <x-table-data tag="th">{{ __('No') }}</x-table-data>
-                <x-table-data tag="th">{{ __('Order ID') }}</x-table-data>
-                <x-table-data tag="th">{{ __('Customer') }}</x-table-data>
-                <x-table-data tag="th">{{ __('Amount') }}</x-table-data>
-                <x-table-data tag="th">{{ __('Status') }}</x-table-data>
-                <x-table-data tag="th">{{ __('Date') }}</x-table-data>
-                <x-table-data tag="th">{{ __('Actions') }}</x-table-data>
-            </x-slot>
+        <x-table>
+            <x-table-head>
+                <tr>
+                    <x-table-th>{{ __('No') }}</x-table-th>
+                    <x-table-th>{{ __('Order ID') }}</x-table-th>
+                    <x-table-th>{{ __('Customer') }}</x-table-th>
+                    <x-table-th>{{ __('Amount') }}</x-table-th>
+                    <x-table-th>{{ __('Status') }}</x-table-th>
+                    <x-table-th>{{ __('Date') }}</x-table-th>
+                    <x-table-th>{{ __('Actions') }}</x-table-th>
+                </tr>
+            </x-table-head>
             
             @foreach($examples as $no => $example)
                 <tr>
-                    <x-table-data tag="td">{{ ++$no }}</x-table-data>
-                    <x-table-data tag="td">
+                    <x-table-td>{{ ++$no }}</x-table-td>
+                    <x-table-td>
                         <x-link underline="true" href="#">{{ $example->id }}</x-link>
-                    </x-table-data>
-                    <x-table-data tag="td">{{ $example->name }}</x-table-data>
-                    <x-table-data tag="td">${{ number_format((float)$example->amount, 2, '.', '') }}</x-table-data>
-                    <x-table-data tag="td">
+                    </x-table-td>
+                    <x-table-td>{{ $example->name }}</x-table-td>
+                    <x-table-td>${{ number_format((float)$example->amount, 2, '.', '') }}</x-table-td>
+                    <x-table-td>
                         @if($example->status == 1)
                             <span class="px-2 py-px text-xs text-white bg-green-600 rounded-full">{{ __('Completed') }}</span>
                         @elseif($example->status == 2)
@@ -132,17 +142,18 @@
                         @elseif($example->status == 3)
                             <span class="px-2 py-px text-xs text-white bg-red-600 rounded-full">{{ __('Cancelled') }}</span>
                         @endif
-                    </x-table-data>
-                    <x-table-data tag="td">{{ date('d-F-Y', strtotime($example->date)) }}</x-table-data>
-                    <x-table-data tag="td">
+                    </x-table-td>
+                    <x-table-td>{{ date('d-F-Y', strtotime($example->date)) }}</x-table-td>
+                    <x-table-td>
                         <span class="flex gap-4">
-                            <x-table-action type="update" href="#"></x-table-action>
-                            <x-table-action type="delete" href="#"></x-table-action>
+                            <x-table-update></x-table-update>
+                            <x-table-delete></x-table-delete>
                         </span>
-                    </x-table-data>
+                    </x-table-td>
                 </tr>
             @endforeach
         </x-table>
+        {{ $examples->links() }}
     </div>
 
 </x-dashboard-layout>
