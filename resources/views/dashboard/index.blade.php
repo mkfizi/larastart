@@ -130,7 +130,7 @@
                 <tr>
                     <x-table-td>{{ ++$no }}</x-table-td>
                     <x-table-td>
-                        <x-link underline="true" href="#">{{ $example->id }}</x-link>
+                        <x-link-underline href="#">{{ $example->id }}</x-link-underline>
                     </x-table-td>
                     <x-table-td>{{ $example->name }}</x-table-td>
                     <x-table-td>${{ number_format((float)$example->amount, 2, '.', '') }}</x-table-td>
