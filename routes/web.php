@@ -27,5 +27,6 @@ Route::name('dashboard.')->group(function () {
 
     Route::prefix('components')->name('components')->group(function () {
         Route::get('/alerts', [DashboardController::class, 'alerts'])->name('alerts'); 
+        Route::get('/collapse', [DashboardController::class, 'collapse'])->name('collapse'); 
     });
 });

@@ -57,5 +57,14 @@ class DashboardController extends Controller
     {
         return view('dashboard.components.alerts');
     }
+    /**
+     * Display dashboard collapse page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function collapse()
+    {
+        return view('dashboard.components.collapse');
+    }
     
 }
