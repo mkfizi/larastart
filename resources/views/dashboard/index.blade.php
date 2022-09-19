@@ -5,7 +5,7 @@
         <div class="p-4 bg-white rounded-md shadow-md dark:bg-gray-800">
             <div class="flex justify-between gap-3">
                 <div class="flex items-center">
-                    <div class="p-4 bg-blue-200 rounded-full">
+                    <div class="p-4 bg-blue-200 rounded">
                         <svg xmlns="http://www.w3.org/2000/svg" class="stroke-blue-500" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <circle cx="6" cy="19" r="2" />
@@ -28,7 +28,7 @@
         <div class="p-4 bg-white rounded-md shadow-md dark:bg-gray-800">
             <div class="flex justify-between gap-3">
                 <div class="flex items-center">
-                    <div class="p-4 bg-blue-200 rounded-full">
+                    <div class="p-4 bg-blue-200 rounded">
                         <svg xmlns="http://www.w3.org/2000/svg" class="stroke-blue-500" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <rect x="3" y="5" width="18" height="14" rx="3" />
@@ -51,7 +51,7 @@
         <div class="p-4 bg-white rounded-md shadow-md dark:bg-gray-800">
             <div class="flex justify-between gap-3">
                 <div class="flex items-center">
-                    <div class="p-4 bg-blue-200 rounded-full">
+                    <div class="p-4 bg-blue-200 rounded">
                         <svg xmlns="http://www.w3.org/2000/svg" class="stroke-blue-500" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <circle cx="9" cy="7" r="4" />
@@ -74,7 +74,7 @@
         <div class="p-4 bg-white rounded-md shadow-md dark:bg-gray-800">
             <div class="flex justify-between gap-3">
                 <div class="flex items-center">
-                    <div class="p-4 bg-blue-200 rounded-full">
+                    <div class="p-4 bg-blue-200 rounded">
                         <svg xmlns="http://www.w3.org/2000/svg" class="stroke-blue-500" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <path d="M3.5 5.5l1.5 1.5l2.5 -2.5" />
@@ -136,11 +136,11 @@
                     <x-table-td>${{ number_format((float)$example->amount, 2, '.', '') }}</x-table-td>
                     <x-table-td>
                         @if($example->status == 1)
-                            <span class="px-2 py-px text-xs text-white bg-green-600 rounded-full">{{ __('Completed') }}</span>
+                            <span class="px-2 py-px text-xs text-white bg-green-600 rounded">{{ __('Completed') }}</span>
                         @elseif($example->status == 2)
-                            <span class="px-2 py-px text-xs text-white bg-yellow-600 rounded-full">{{ __('Pending') }}</span>
+                            <span class="px-2 py-px text-xs text-white bg-yellow-600 rounded">{{ __('Pending') }}</span>
                         @elseif($example->status == 3)
-                            <span class="px-2 py-px text-xs text-white bg-red-600 rounded-full">{{ __('Cancelled') }}</span>
+                            <span class="px-2 py-px text-xs text-white bg-red-600 rounded">{{ __('Cancelled') }}</span>
                         @endif
                     </x-table-td>
                     <x-table-td>{{ date('d-F-Y', strtotime($example->date)) }}</x-table-td>
