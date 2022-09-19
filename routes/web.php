@@ -25,8 +25,12 @@ Route::name('dashboard.')->group(function () {
     Route::get('/forms', [DashboardController::class, 'forms'])->name('forms');
     Route::get('/buttons', [DashboardController::class, 'buttons'])->name('buttons');
 
-    Route::prefix('components')->name('components')->group(function () {
+    Route::prefix('components')->name('components.')->group(function () {
         Route::get('/alerts', [DashboardController::class, 'alerts'])->name('alerts'); 
         Route::get('/collapse', [DashboardController::class, 'collapse'])->name('collapse'); 
+    });
+
+    Route::prefix('pages')->name('pages.')->group(function () {
+        Route::get('/blank', [DashboardController::class, 'blank'])->name('blank'); 
     });
 });

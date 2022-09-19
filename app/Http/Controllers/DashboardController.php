@@ -57,6 +57,7 @@ class DashboardController extends Controller
     {
         return view('dashboard.components.alerts');
     }
+
     /**
      * Display dashboard collapse page.
      *
@@ -65,6 +66,17 @@ class DashboardController extends Controller
     public function collapse()
     {
         return view('dashboard.components.collapse');
+    }
+    
+    
+    /**
+     * Display dashboard blank page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function blank()
+    {
+        return view('dashboard.pages.blank');
     }
     
 }
