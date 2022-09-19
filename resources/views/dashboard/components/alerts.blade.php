@@ -8,7 +8,7 @@
 
         <x-alert id="alertExample">
             <span>{{ __('This is a regular alert example.') }}</span>
-            <x-alert-hide for="alertExample">{{ __('Close alert regular example') }} </x-alert-hide>
+            <x-alert-hide target="alertExample">{{ __('Close alert regular example') }} </x-alert-hide>
         </x-alert>
     </div>
 
@@ -27,7 +27,7 @@
                 </svg>
                 <span>{{ __('This is an alert with icon example.') }}</span>
             </div>
-            <x-alert-hide for="alertIconExample">{{ __('Close alert icon example') }} </x-alert-hide>
+            <x-alert-hide target="alertIconExample">{{ __('Close alert icon example') }} </x-alert-hide>
         </x-alert>
     </div>
 </x-dashboard-layout>
