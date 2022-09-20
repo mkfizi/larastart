@@ -17,11 +17,15 @@
             <main class="p-4 mx-auto md:max-w-3xl xl:max-w-5xl lg:px-6">
                 <section class="mt-4 mb-16">
                     <div class="mb-4">
-                        <x-title-md>{{ !empty($attributes['pageTitle']) ? $attributes['pageTitle'] : '' }}</x-title-md>
+                        <x-title-md>
+                            @hasSection('title')
+                                @yield('title')
+                            @endif
+                        </x-title-md>
                     </div>
 
                     {{-- View Github --}}
-                    @if(! Route::is('dashboard.pages.blank'))
+                    @if(! Route::is('dashboard.blank'))
                         <div class="mb-4">
                             <a href="https://github.com/mkfizi/larastart" target="_blank">
                                 <x-alert>
