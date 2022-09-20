@@ -1,4 +1,6 @@
-<x-dashboard-layout pageTitle="{{ __('Buttons') }}">
+@section('title', __('Buttons'))
+
+<x-dashboard-layout>
 
     {{-- Example --}}
     <div class="mb-4">

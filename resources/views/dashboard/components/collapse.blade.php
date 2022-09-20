@@ -1,4 +1,6 @@
-<x-dashboard-layout pageTitle="{{ __('Collapse') }}">
+@section('title', __('Collapse'))
+
+<x-dashboard-layout>
 
     <!-- Regular -->
     <div class="mb-4">

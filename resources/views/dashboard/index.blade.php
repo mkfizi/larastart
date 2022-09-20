@@ -1,4 +1,6 @@
-<x-dashboard-layout pageTitle="{{ __('Dashboard') }}">
+@section('title', __('Dashboard'))
+
+<x-dashboard-layout>
 
     {{-- Statistic --}}
     <div class="grid gap-4 mb-8 md:grid-cols-2 xl:grid-cols-4">

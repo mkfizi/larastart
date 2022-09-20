@@ -1,4 +1,6 @@
-<x-dashboard-layout pageTitle="{{ __('Typography') }}">
+@section('title', __('Typography'))
+
+<x-dashboard-layout>
 
     {{-- Styles --}}
     <div class="mb-4">

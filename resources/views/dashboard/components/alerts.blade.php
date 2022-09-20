@@ -1,4 +1,6 @@
-<x-dashboard-layout pageTitle="{{ __('Alerts') }}">
+@section('title', __('Alerts'))
+
+<x-dashboard-layout>
     
     {{-- Regular --}}
     <div class="mb-4">
