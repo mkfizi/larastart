@@ -1,8 +1,6 @@
 @extends('app')
 
-@php
-    $bgColor = 'bg-gray-50';
-@endphp
+@section('bgColor', 'bg-gray-50')
 
 @section('layout')
     <div class="flex">
