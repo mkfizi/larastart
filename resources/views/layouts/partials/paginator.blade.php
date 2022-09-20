@@ -1,3 +1,5 @@
+{{-- Table paginator view --}}
+
 <div class="flex flex-col flex-wrap items-center justify-center gap-2 p-4 text-left lg:flex-row lg:justify-between">
     <div class="flex items-center gap-2 text-sm">
         {{-- First page link --}}
